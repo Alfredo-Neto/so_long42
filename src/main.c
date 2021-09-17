@@ -15,6 +15,7 @@ int main()
 		int		img_width;
 		int 	img_height;
 
+		print_ola();
 
 		mlx = mlx_init();
 		win = mlx_new_window(mlx, 500, 500, "my_mlx");
