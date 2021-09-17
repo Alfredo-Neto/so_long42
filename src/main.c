@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include "mlx.h"
+#include "so_long.h"
 
 void ft_putchar(int c)
 {
