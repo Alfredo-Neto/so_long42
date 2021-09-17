@@ -1,13 +1,8 @@
 #include "so_long.h"
 
-void ft_putchar(int c)
-{
-	write(1, &c, 1);
-}
-
 int deal_key(int key, void *param)
 {
-	ft_putchar('X');
+	ft_putchar_fd('X', 2);
 	return (0);
 }
 
@@ -19,6 +14,7 @@ int main()
 
 		int		img_width;
 		int 	img_height;
+
 
 		mlx = mlx_init();
 		win = mlx_new_window(mlx, 500, 500, "my_mlx");
