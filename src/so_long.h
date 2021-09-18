@@ -6,6 +6,9 @@
 # include "../mlx_linux/mlx.h"
 # include "../libft/libft.h"
 
-void    print_ola();
+# define XK_MISCELLANY
+# include <X11/keysymdef.h>
+# include <X11/X.h>
+
 
 #endif
