@@ -3,6 +3,7 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <math.h>
 # include "../mlx_linux/mlx.h"
 # include "../libft/libft.h"
 
