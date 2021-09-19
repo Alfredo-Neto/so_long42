@@ -3,5 +3,5 @@
 
 char map_gen()
 {
-    
+    printf("hello");
 }
