@@ -4,8 +4,8 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <math.h>
-# include "../mlx_linux/mlx.h"
-# include "../libft/libft.h"
+# include "../libraries/mlx_linux/mlx.h"
+# include "../libraries/libft/libft.h"
 
 # define XK_MISCELLANY
 # include <X11/keysymdef.h>

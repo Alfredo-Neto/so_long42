@@ -1,9 +1,9 @@
 NAME = so_long
 
-LIBFT_DIR = libft
+LIBFT_DIR = libraries/libft
 LIBFT = $(LIBFT_DIR)/libft.a
 
-MLX_DIR = mlx_linux
+MLX_DIR = libraries/mlx_linux
 MLX = $(MLX_DIR)/libmlx.a
 
 RM = rm -rf
@@ -14,7 +14,7 @@ HEADERS = src/so_long.h
 
 INCLUDE_DIR = includes
 
-SRC_FILES = map_2d.c
+SRC_FILES = main.c
 
 SRC = $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 OBJ = $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)

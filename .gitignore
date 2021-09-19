@@ -1,0 +1,11 @@
+a.out
+*.o
+mlx-test
+libft.a
+libmlx.a
+libmlx_Linux.a
+.vscode
+*.psd
+images
+README.md
+license
