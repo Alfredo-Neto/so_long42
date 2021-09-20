@@ -1,3 +1,0 @@
-[submodule "libraries/libft"]
-	path = libraries/libft
-	url = https://github.com/Alfredo-Neto/libft42.git

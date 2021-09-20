@@ -2,6 +2,7 @@
 # define SO_LONG_H
 # include <stdio.h>
 # include <unistd.h>
+# include <fcntl.h>
 # include <stdlib.h>
 # include <math.h>
 # include "../libraries/mlx_linux/mlx.h"
