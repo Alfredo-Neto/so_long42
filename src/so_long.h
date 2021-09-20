@@ -12,5 +12,6 @@
 # include <X11/keysymdef.h>
 # include <X11/X.h>
 
+char    *map_gen();
 
 #endif

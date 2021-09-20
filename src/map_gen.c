@@ -1,15 +1,21 @@
 #include "so_long.h"
 
-char map_gen()
+char *map_gen()
 {
     int fd;
-    int ret;
     char *line;
 
-    fd = open('../assets/maps/map.ber', O_RDONLY);
+    fd = open("../assets/maps/map.ber", O_RDONLY);
+    if (fd < 0)
+    {
+        ft_putstr_fd("Mapa não pôde ser lido", fd);
+        return (NULL);
+    }
     while(ft_get_next_line(fd, &line))
     {
-        printf("%s", line);
-        free(line);
+        printf("%s\n", line);
+        ft_super_free((void *)&line);
     }
+    close(fd);
+    return (line);
 }
