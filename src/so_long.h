@@ -12,6 +12,7 @@
 # include <X11/keysymdef.h>
 # include <X11/X.h>
 
-char    *map_gen();
+char    **read_map();
+void    fill_map_positions(char **map);
 
 #endif

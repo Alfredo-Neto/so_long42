@@ -14,7 +14,7 @@ HEADERS = src/so_long.h
 
 INCLUDE_DIR = includes
 
-SRC_FILES = so_long.c map_gen.c
+SRC_FILES = so_long.c read_map.c fill_map_positions.c
 
 SRC = $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 OBJ = $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
@@ -29,7 +29,7 @@ $(NAME): $(OBJ_DIR) $(LIBFT) $(MLX) $(OBJ)
 	$(CC) $(OBJ) -L$(LIBFT_DIR) -L$(MLX_DIR) $(LIBFLAGS) -o $@
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(HEADERS)
-	$(CC) -c -I$(INCLUDE_DIR) -o $@ $<
+	$(CC) $(CFLAGS) -c -I$(INCLUDE_DIR) -o $@ $<
 
 $(LIBFT):
 	make -C $(LIBFT_DIR)
