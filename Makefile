@@ -14,7 +14,7 @@ HEADERS = src/so_long.h
 
 INCLUDE_DIR = includes
 
-SRC_FILES = so_long.c read_map.c fill_map_positions.c
+SRC_FILES = so_long.c read_map.c
 
 SRC = $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 OBJ = $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
