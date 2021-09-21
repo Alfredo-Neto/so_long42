@@ -41,7 +41,7 @@ $(OBJ_DIR):
 	mkdir $(OBJ_DIR)
 
 run:
-	./so_long
+	./so_long "assets/maps/map.ber"
 
 clean:
 	$(RM) $(OBJ)
