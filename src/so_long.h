@@ -36,12 +36,15 @@ struct s_window
     int     win_height;
 };
 
-# define FILE_WALL "./textures/wall_n.xpm"
+# define FILE_WALL "./textures/wall_e.xpm"
+# define SPRITE_SIZE    32
 
 char    **read_map();
 void    map_render(char **map, t_window *window, t_img *image);
 void    *init_image(t_img *image);
 void    draw_image(t_window *window, t_img *image, int x, int y);
 void    init_window(t_window *window, t_img *image);
+void    print_map (char **map);
+void    map_counter (char **map, t_window *window);
 
 #endif
