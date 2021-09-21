@@ -5,7 +5,7 @@ char **read_map(char *path_to_file)
     int fd;
     char *line;
     char *buffer;
-    char **result;
+    char **map;
 
     fd = open(path_to_file, O_RDONLY);
     if (fd == -1)
@@ -20,8 +20,8 @@ char **read_map(char *path_to_file)
         buffer = ft_strjoin(buffer, "\n");
         ft_super_free((void *)&line);
     }
-    result = ft_split(buffer, '\n');
+    map = ft_split(buffer, '\n');
     ft_super_free((void *)&buffer);
     close(fd);
-    return (result);
+    return (map);
 }

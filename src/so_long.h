@@ -13,6 +13,5 @@
 # include <X11/X.h>
 
 char    **read_map();
-void    fill_map_positions(char **map);
 
 #endif
