@@ -12,6 +12,19 @@
 # include <X11/keysymdef.h>
 # include <X11/X.h>
 
+typedef struct s_img
+{
+    void    *mlx;
+    void    *win;
+    void    *wall;
+    void    *empty_space;
+    void    *collectable;
+    void    *player;
+    char    **map;
+} t_img;
+
+
 char    **read_map();
+void    map_render(t_img *game);
 
 #endif
