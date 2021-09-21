@@ -8,7 +8,7 @@ char **read_map(char *path_to_file)
     char **result;
 
     fd = open(path_to_file, O_RDONLY);
-    if (fd < 0)
+    if (fd == -1)
     {
         ft_putstr_fd("Mapa não pôde ser lido", fd);
         return (NULL);
@@ -18,6 +18,7 @@ char **read_map(char *path_to_file)
     {
         printf("%s\n", line);
         buffer = ft_strjoin(buffer, line);
+        buffer = ft_strjoin(buffer, "\n");
         ft_super_free((void *)&line);
     }
     result = ft_split(buffer, '\n');

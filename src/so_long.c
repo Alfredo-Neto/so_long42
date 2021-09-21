@@ -3,16 +3,14 @@
 int main (int argc, char **argv)
 { 
     char **map;
-    map = NULL;
+    int i;
 
-    if (argc != 0)
+    i = 0;
+    if (argc == 2)
     {
         map = read_map(argv[1]);
-        printf("\nMapa: %s", *map);
+        printf("Mapa: %s", map[2]);
     }
-
-    // printf("\n\n---------- Imprimir mapa formatado: -------------\n");
-    // fill_map_positions(map);
     
     return 0;
 }
