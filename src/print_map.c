@@ -4,7 +4,7 @@ void print_map (char **map)
 {
     int i;
     i = 0;
-    printf("\nMapa: \n");
+    printf("\n------------- Mapa: --------------\n");
     while (map[i])
     {
         printf("%s\n", map[i]);

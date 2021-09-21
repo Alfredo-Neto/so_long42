@@ -2,20 +2,19 @@
 
 int main (int argc, char **argv)
 { 
-    t_window window;
-    t_img   image;
+    t_game   game;
 
 
     if (argc == 2)
     {
-        image.mlx = mlx_init();
-        image.map = read_map(argv[1]);
-        map_counter(image.map, &window);
-        init_window(&window, &image);
+        game.mlx = mlx_init();
+        game.map = read_map(argv[1]);
+        map_counter(game.map, &game);
+        init_window(&game);
     
-        print_map(image.map);
+        print_map(game.map);
 
-        map_render(image.map, &window, &image);
-        mlx_loop(image.mlx);
+        map_render(game.map, &game);
+        mlx_loop(game.mlx);
     }
 }

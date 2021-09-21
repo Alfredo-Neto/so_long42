@@ -1,6 +1,6 @@
 #include "so_long.h"
 
-void    map_counter (char **map, t_window *window)
+void    map_counter (char **map, t_game *window)
 {
     int  i;
     int j;
@@ -24,9 +24,8 @@ void    map_counter (char **map, t_window *window)
         count_rows++;
         i++;
     }
-
     count_cols = count_units / count_rows;
     window->win_width = count_cols;
     window->win_height = count_rows;
-    printf("\nNúmero de linhas: %d. Número de Colunas: %d\n", count_rows, count_cols);
+    printf("\nNúmero de linhas: %d. Número de Colunas: %d\n", window->win_height, window->win_width);
 }

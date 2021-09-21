@@ -1,7 +1,7 @@
 #include "so_long.h"
 
-void init_window(t_window *window, t_img *image)
+void init_window(t_game *game)
 {
-   window->win = mlx_new_window
-      (image->mlx, window->win_width * SPRITE_SIZE, window->win_height * SPRITE_SIZE, "so_long");
+   game->win = mlx_new_window
+      (game->mlx, game->win_width * SPRITE_SIZE, game->win_height * SPRITE_SIZE, "so_long");
 }
