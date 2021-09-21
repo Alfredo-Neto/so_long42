@@ -16,7 +16,6 @@ char **read_map(char *path_to_file)
     buffer = ft_strdup("");
     while(ft_get_next_line(fd, &line))
     {
-        printf("%s\n", line);
         buffer = ft_strjoin(buffer, line);
         buffer = ft_strjoin(buffer, "\n");
         ft_super_free((void *)&line);
