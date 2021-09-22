@@ -11,4 +11,5 @@ void   map_image_positions(t_game *image)
 {
     image->wall = init_image(FILE_WALL, image);
     image->empty_space = init_image(FILE_SPACE, image);
+    image->collectable = init_image(FILE_COLLECTABLE, image);
 }

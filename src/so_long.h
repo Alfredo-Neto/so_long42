@@ -33,6 +33,7 @@ struct s_game
 
 # define FILE_WALL "textures/wall_e.xpm"
 # define FILE_SPACE "textures/wall_n.xpm"
+# define FILE_COLLECTABLE "textures/wall_s.xpm"
 # define SPRITE_SIZE    32
 
 char    **read_map();

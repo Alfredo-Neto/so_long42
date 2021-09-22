@@ -17,14 +17,16 @@ void    map_render(char **map, t_game *game)
                 draw_image(game, game->wall, i, j);
                 printf("1");
             }
-               
             else if (map[i][j] == '0')
             {
                 draw_image(game, game->empty_space, i, j);
                 printf("0");
             }
             else
+            {
+                draw_image(game, game->collectable, i, j);
                 printf(" ");
+            }
             j++;
         }
         printf("\n");
