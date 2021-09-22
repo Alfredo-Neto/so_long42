@@ -14,6 +14,8 @@ int main (int argc, char **argv)
     
         print_map(game.map);
 
+    	map_image_positions(&game);
+
         map_render(game.map, &game);
         mlx_loop(game.mlx);
     }
