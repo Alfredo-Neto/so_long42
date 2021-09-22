@@ -22,7 +22,7 @@ void    map_render(char **map, t_game *game)
                 draw_image(game, game->empty_space, i, j);
                 printf("0");
             }
-            else
+            else if (map[i][j] == 'C')
             {
                 draw_image(game, game->collectable, i, j);
                 printf(" ");
