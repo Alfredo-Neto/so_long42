@@ -1,9 +1,9 @@
 #include "so_long.h"
 
-void    *init_image(char *img, t_game *image)
+void    *init_image(char *img, t_game *game)
 {
     img = mlx_xpm_file_to_image
-        (image->mlx, img, &image->img_width, &image->img_height);
+        (game->mlx, img, &game->img_width, &game->img_height);
     return (img);
 }
 

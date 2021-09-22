@@ -29,17 +29,18 @@ struct s_game
     int     img_height;
     int     win_height;
     int     win_width;
+    int     map_size;
 };
 
-# define FILE_WALL "textures/wall_e.xpm"
-# define FILE_SPACE "textures/wall_n.xpm"
-# define FILE_COLLECTABLE "textures/wall_s.xpm"
+# define FILE_WALL "textures/1.xpm"
+# define FILE_SPACE "textures/0.xpm"
+# define FILE_COLLECTABLE "textures/C.xpm"
 # define SPRITE_SIZE    32
 
 char    **read_map();
 void    map_render(char **map, t_game *game);
 void    *init_image(char *img, t_game *game);
-void    draw_image(t_game *game, char *img, int x, int y);
+void    draw_image(t_game *game, void *img, int x, int y);
 void    init_window(t_game *game);
 void    print_map (char **map);
 void    map_counter (char **map, t_game *game);

@@ -12,4 +12,5 @@ void    map_counter (char **map, t_game *game)
         i++;
     }
     game->win_width = ft_strlen(*map);
+    game->map_size = game->win_height * game->win_width;
 }

@@ -8,6 +8,8 @@ MLX = $(MLX_DIR)/libmlx.a
 
 RM = rm -rf
 
+XPM_DIR = textures
+IMG_DIR = assets/img
 SRC_DIR = src
 OBJ_DIR = obj
 HEADERS = src/so_long.h
@@ -43,6 +45,9 @@ $(OBJ_DIR):
 
 run:
 	./so_long "assets/maps/map.ber"
+
+img:
+	convert $(IMG_DIR)/*.jpg -set filename:base "%[basename]" "%[filename:base].xpm" && mv *.xpm $(XPM_DIR)
 
 clean:
 	$(RM) $(OBJ)
