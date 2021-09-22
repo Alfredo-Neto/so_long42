@@ -7,9 +7,9 @@ void    *init_image(char *img, t_game *image)
     return (img);
 }
 
-void   map_image_positions(t_game *image)
+void   map_image_positions(t_game *game)
 {
-    image->wall = init_image(FILE_WALL, image);
-    image->empty_space = init_image(FILE_SPACE, image);
-    image->collectable = init_image(FILE_COLLECTABLE, image);
+    game->wall = init_image(FILE_WALL, game);
+    game->empty_space = init_image(FILE_SPACE, game);
+    game->collectable = init_image(FILE_COLLECTABLE, game);
 }

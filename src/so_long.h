@@ -24,11 +24,11 @@ struct s_game
     void    *collectable;
     void    *player;
     void    *win;
-    int     win_width;
     char    **map;
     int     img_width;
     int     img_height;
     int     win_height;
+    int     win_width;
 };
 
 # define FILE_WALL "textures/wall_e.xpm"
@@ -42,7 +42,7 @@ void    *init_image(char *img, t_game *game);
 void    draw_image(t_game *game, char *img, int x, int y);
 void    init_window(t_game *game);
 void    print_map (char **map);
-void    map_counter (char **map, t_game *window);
-void    map_image_positions(t_game *image);
+void    map_counter (char **map, t_game *game);
+void    map_image_positions(t_game *game);
 
 #endif
