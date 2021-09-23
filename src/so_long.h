@@ -21,8 +21,9 @@ struct s_game
     void    *mlx;
     void    *wall;
     void    *empty_space;
-    void    *collectable;
+    void    *collectible;
     void    *player;
+    void    *exit;
     void    *win;
     char    **map;
     int     img_width;
@@ -30,20 +31,25 @@ struct s_game
     int     win_height;
     int     win_width;
     int     map_size;
+    char    **map_read;
 };
 
 # define FILE_WALL "textures/1.xpm"
 # define FILE_SPACE "textures/0.xpm"
-# define FILE_COLLECTABLE "textures/C.xpm"
-# define SPRITE_SIZE    32
+# define FILE_COLLECTIBLE "textures/0.xpm"
+# define FILE_PLAYER "textures/0.xpm"
+# define FILE_EXIT "textures/E.xpm"
+# define SPRITE_SIZE   32
 
-char    **read_map();
+char    **read_map(char *path_to_file);
 void    map_render(char **map, t_game *game);
-void    *init_image(char *img, t_game *game);
-void    draw_image(t_game *game, void *img, int x, int y);
-void    init_window(t_game *game);
 void    print_map (char **map);
 void    map_counter (char **map, t_game *game);
 void    map_image_positions(t_game *game);
+void    *init_image(char *img, t_game *game);
+void    draw_image(t_game *game, void *img, int x, int y);
+void    init_window(t_game *game);
 
 #endif
+
+# define JORGE 37

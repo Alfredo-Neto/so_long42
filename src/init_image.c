@@ -11,5 +11,7 @@ void   map_image_positions(t_game *game)
 {
     game->wall = init_image(FILE_WALL, game);
     game->empty_space = init_image(FILE_SPACE, game);
-    game->collectable = init_image(FILE_COLLECTABLE, game);
+    game->collectible = init_image(FILE_COLLECTIBLE, game);
+    game->player = init_image(FILE_PLAYER, game);
+    game->exit = init_image(FILE_EXIT, game);
 }

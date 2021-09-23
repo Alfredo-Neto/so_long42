@@ -19,3 +19,5 @@ int main (int argc, char **argv)
         mlx_loop(game.mlx);
     }
 }
+
+// handle_opacity(FILE_EXIT, &game);

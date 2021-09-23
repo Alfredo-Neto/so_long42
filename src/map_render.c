@@ -24,8 +24,18 @@ void    map_render(char **map, t_game *game)
             }
             else if (map[i][j] == 'C')
             {
-                draw_image(game, game->collectable, i, j);
-                printf(" ");
+                draw_image(game, game->collectible, i, j);
+                printf("C");
+            }
+            else if (map[i][j] == 'P')
+            {
+                draw_image(game, game->player, i, j);
+                printf("P");
+            }
+            else if (map[i][j] == 'E')
+            {
+                draw_image(game, game->exit, i, j);
+                printf("E");
             }
             j++;
         }

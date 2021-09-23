@@ -44,10 +44,10 @@ $(OBJ_DIR):
 	mkdir $(OBJ_DIR)
 
 run:
-	./so_long "assets/maps/map_2.ber"
+	./so_long "assets/maps/map.ber"
 
 img:
-	convert $(IMG_DIR)/*.jpg -set filename:base "%[basename]" "%[filename:base].xpm" && mv *.xpm $(XPM_DIR)
+	convert $(IMG_DIR)/*.png -set filename:base "%[basename]" "%[filename:base].xpm" && mv *.xpm $(XPM_DIR)
 
 clean:
 	$(RM) $(OBJ)
