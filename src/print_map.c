@@ -10,6 +10,5 @@ void print_map (char **map)
         printf("%s\n", map[i]);
         i++;
     }
-    printf("%s\n", map[i]);
     printf("\n");
 }
