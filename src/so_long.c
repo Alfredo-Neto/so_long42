@@ -3,6 +3,7 @@
 int main (int argc, char **argv)
 { 
     t_game   game;
+    t_param param;
 
     if (argc == 2)
     {
@@ -13,11 +14,15 @@ int main (int argc, char **argv)
     
         print_map(game.map);
 
-    	map_image_positions(&game);
+    	initialize_image(&game);
 
         map_render(game.map, &game);
+
+        map_update(param.keycode, &game);
+        
+        print_map(game.map);
+
+        event_handler(&param, &game, &map_update);
         mlx_loop(game.mlx);
     }
 }
-
-// handle_opacity(FILE_EXIT, &game);

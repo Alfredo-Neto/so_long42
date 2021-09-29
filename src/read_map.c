@@ -22,6 +22,7 @@ char **read_map(char *path_to_file)
     }
     buffer = ft_strjoin(buffer, line);
     map = ft_split(buffer, '\n');
+    ft_super_free((void *)&line);
     ft_super_free((void *)&buffer);
     close(fd);
     return (map);
