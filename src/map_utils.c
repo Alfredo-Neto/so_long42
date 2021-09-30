@@ -14,3 +14,16 @@ void    map_counter (char **map, t_game *game)
     game->win_width = ft_strlen(*map);
     game->map_size = game->win_height * game->win_width;
 }
+
+void print_map (char **map)
+{
+    int i;
+    i = 0;
+    printf("\n------------- Mapa: --------------\n");
+    while (map[i])
+    {
+        printf("%s\n", map[i]);
+        i++;
+    }
+    printf("\n");
+}
