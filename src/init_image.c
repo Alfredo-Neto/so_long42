@@ -1,6 +1,6 @@
 #include "so_long.h"
 
-void    *convert_image(char *img, t_game *game)
+static void    *convert_image(char *img, t_game *game)
 {
     game->img = mlx_xpm_file_to_image
         (game->mlx, img, &game->img_width, &game->img_height);

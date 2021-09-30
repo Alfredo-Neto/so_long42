@@ -12,7 +12,6 @@
 # include <X11/keysymdef.h>
 # include <X11/X.h>
 
-
 typedef struct s_game    t_game;
 
 struct s_game
@@ -36,11 +35,9 @@ struct s_game
     char    **map_read;
 };
 
-
 typedef struct s_param{
 	int     keycode;
 }				t_param;
-
 
 # define FILE_WALL "textures/1.xpm"
 # define FILE_SPACE "textures/0.xpm"
@@ -49,22 +46,23 @@ typedef struct s_param{
 # define FILE_EXIT "textures/E.xpm"
 # define SPRITE_SIZE   32
 
-#define KEY_W 119
-#define KEY_D 100
+# define X_EVENT_KEY_PRESS 2
+# define KEY_W 119
+# define KEY_D 100
+# define KEY_A 97
 
 char    **read_map(char *path_to_file);
 void    map_render(char **map, t_game *game);
 void    print_map (char **map);
 void    map_counter (char **map, t_game *game);
-void    player_update(int keycode, t_game *game);
+void	player_update(int keycode, t_game *game);
 void    initialize_image(t_game *game);
-void    *convert_image(char *img, t_game *game);
 void    draw_image(t_game *game, void *img, int x, int y);
 void    init_window(t_game *game);
-void    event_handler(t_param *param, t_game *game);
+void    event_handler(t_param *param, t_game *game, int (*f)());
 void    move_right(t_game *game);
-void    get_player(char **map, t_game *game);
 void    swap_positions (char *current_pos, char *next_pos, char current_value, char next_value);
 int     key_press(int keycode, t_game *game);
+
 #endif
 

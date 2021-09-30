@@ -17,14 +17,11 @@ int main (int argc, char **argv)
     	initialize_image(&game);
 
         map_render(game.map, &game);
-
-        get_player(game.map, &game);
-
-        key_press(param.keycode, &game);
-
-        event_handler(&param, &game);
         
-        print_map(game.map);
+        key_press(param.keycode, &game);
+        event_handler(&param, &game, &key_press);
+        
+        // print_map(game.map);
 
         mlx_loop(game.mlx);
     }
