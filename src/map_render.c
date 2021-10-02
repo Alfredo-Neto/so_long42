@@ -22,8 +22,8 @@ void    map_render(char **map, t_game *game)
             else if (map[i][j] == 'P')
             {
                 draw_image(game, game->player, i, j);
-                // game->x = j;
-                // game->y = i;
+                game->x = i;
+                game->y = j;
             }
             j++;
         }

@@ -13,6 +13,7 @@
 # include <X11/X.h>
 
 typedef struct s_game    t_game;
+typedef struct s_param   t_param;
 
 struct s_game
 {
@@ -32,12 +33,9 @@ struct s_game
     int     map_size;
     int     x;
     int     y;
+    int     moves;
     char    **map_read;
 };
-
-typedef struct s_param{
-	int     keycode;
-}				t_param;
 
 # define FILE_WALL "textures/1.xpm"
 # define FILE_SPACE "textures/0.xpm"
@@ -59,8 +57,8 @@ void	player_update(int keycode, t_game *game);
 void    initialize_image(t_game *game);
 void    draw_image(t_game *game, void *img, int x, int y);
 void    init_window(t_game *game);
-void    event_handler(t_param *param, t_game *game, int (*f)());
-void    move_right(t_game *game);
+// void    event_handler(t_param *param, t_game *game, int (*f)());
+void    move_right(t_game *game, int x, int y);
 void    swap_positions (char *current_pos, char *next_pos, char current_value, char next_value);
 int     key_press(int keycode, t_game *game);
 

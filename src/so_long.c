@@ -3,7 +3,6 @@
 int main (int argc, char **argv)
 { 
     t_game   game;
-    t_param param;
 
     if (argc == 2)
     {
@@ -17,12 +16,14 @@ int main (int argc, char **argv)
     	initialize_image(&game);
 
         map_render(game.map, &game);
-        
-        key_press(param.keycode, &game);
-        event_handler(&param, &game, &key_press);
-        
-        // print_map(game.map);
+
+        mlx_hook(game.win, X_EVENT_KEY_PRESS, 1L<<0, &key_press, &game);
 
         mlx_loop(game.mlx);
+    }
+    else
+    {
+        printf("No map specified!");
+        exit(0);
     }
 }
