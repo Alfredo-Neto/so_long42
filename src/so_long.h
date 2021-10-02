@@ -46,8 +46,14 @@ struct s_game
 
 # define X_EVENT_KEY_PRESS 2
 # define KEY_W 119
-# define KEY_D 100
 # define KEY_A 97
+# define KEY_S 115
+# define KEY_D 100
+
+# define KEY_UP 65362
+# define KEY_LEFT 65361
+# define KEY_DOWN 65364
+# define KEY_RIGHT 65363
 
 char    **read_map(char *path_to_file);
 void    map_render(char **map, t_game *game);
@@ -59,6 +65,9 @@ void    draw_image(t_game *game, void *img, int x, int y);
 void    init_window(t_game *game);
 // void    event_handler(t_param *param, t_game *game, int (*f)());
 void    move_right(t_game *game, int x, int y);
+void    move_up(t_game *game, int x, int y);
+void    move_down(t_game *game, int x, int y);
+void    move_left(t_game *game, int x, int y);
 void    swap_positions (char *current_pos, char *next_pos, char current_value, char next_value);
 int     key_press(int keycode, t_game *game);
 
