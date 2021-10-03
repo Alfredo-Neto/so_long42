@@ -1,5 +1,12 @@
 #include "so_long.h"
 
+
+static void  swap_positions (char *current_pos, char *next_pos, char current_value, char next_value)
+{
+    *current_pos = next_value;
+    *next_pos = current_value;
+}
+
 void move_player(t_game *game, int x, int y)
 {
     int i;
@@ -15,5 +22,4 @@ void move_player(t_game *game, int x, int y)
         game->y = y;
     }
     print_map(game->map);
-    printf("Moves: %d", game->moves);
 }

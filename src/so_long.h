@@ -65,7 +65,6 @@ void    draw_image(t_game *game, void *img, int x, int y);
 void    init_window(t_game *game);
 // void    event_handler(t_param *param, t_game *game, int (*f)());
 void    move_player(t_game *game, int x, int y);
-void    swap_positions (char *current_pos, char *next_pos, char current_value, char next_value);
 int     key_press(int keycode, t_game *game);
 
 #endif

@@ -10,5 +10,6 @@ void	player_update(int keycode, t_game *game)
 	    move_player(game, game->x, game->y - 1);
     if(keycode == KEY_D || keycode == KEY_RIGHT)
 	    move_player(game, game->x, game->y + 1);
+    printf("Moves: %d", game->moves);
 }    
 
