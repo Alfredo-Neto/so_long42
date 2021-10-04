@@ -18,7 +18,7 @@ INCLUDE_DIR = includes
 
 SRC_FILES = so_long.c read_map.c map_render.c draw_image.c init_window.c	\
 			init_image.c map_utils.c player_update.c event_handler.c \
-			game_utils.c move_player.c
+			game_utils.c move_player.c show_info.c hook_c.c hook_p.c
 SRC = $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 OBJ = $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 

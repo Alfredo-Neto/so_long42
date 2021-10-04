@@ -16,18 +16,11 @@ void    map_render(char **map, t_game *game)
             else if (map[i][j] == '0')
                 draw_image(game, game->empty_space, i, j);
             else if (map[i][j] == 'C')
-            {
-                draw_image(game, game->collectible, i, j);
-                game->collectibles++;
-            }
+                hook_c(game, i, j);
             else if (map[i][j] == 'E')
                 draw_image(game, game->exit, i, j);
             else if (map[i][j] == 'P')
-            {
-                draw_image(game, game->player, i, j);
-                game->x = i;
-                game->y = j;
-            }
+                hook_p(game, i, j);
             j++;
         }
         i++;

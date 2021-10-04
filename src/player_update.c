@@ -10,8 +10,6 @@ void	player_update(int keycode, t_game *game)
 	    handle_situation(game, game->x, game->y - 1);
     if(keycode == KEY_D || keycode == KEY_RIGHT)
 	    handle_situation(game, game->x, game->y + 1);
-    printf("Moves: %d\n", game->moves);
-    printf("Collectibles: %d, Collected: %d", game->collectibles, game->collected);
-    print_map(game->map);
+    show_info(game);
 }    
 

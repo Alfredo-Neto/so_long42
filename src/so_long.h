@@ -67,6 +67,9 @@ void    draw_image(t_game *game, void *img, int x, int y);
 void    init_window(t_game *game);
 int     key_press(int keycode, t_game *game);
 void    handle_situation(t_game *game, int x, int y);
+void    show_info(t_game *game);
+void    hook_c (t_game *game, int i, int j);
+void    hook_p (t_game *game, int i, int j);
 
 #endif
 
