@@ -34,6 +34,8 @@ struct s_game
     int     x;
     int     y;
     int     moves;
+    int     collected;
+    int     collectibles;
     char    **map_read;
 };
 
@@ -63,9 +65,8 @@ void	player_update(int keycode, t_game *game);
 void    initialize_image(t_game *game);
 void    draw_image(t_game *game, void *img, int x, int y);
 void    init_window(t_game *game);
-// void    event_handler(t_param *param, t_game *game, int (*f)());
-void    move_player(t_game *game, int x, int y);
 int     key_press(int keycode, t_game *game);
+void    handle_situation(t_game *game, int x, int y);
 
 #endif
 
