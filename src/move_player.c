@@ -15,9 +15,9 @@ static void handle_0(t_game *game, int x, int y)
     i = game->x;
     j = game->y;
     swap_positions(&game->map[i][j], &game->map[x][y], 'P', '0');
+    game->moves++;
     game->x = x;
     game->y = y;
-    game->moves++;
 }
 
 static void handle_c(t_game *game, int x, int y)
