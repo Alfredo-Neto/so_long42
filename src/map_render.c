@@ -1,6 +1,6 @@
 #include "so_long.h"
 
-static void    map_render(char **map, t_game *game)
+void    map_render(char **map, t_game *game)
 {
     int  i;
     int  j;
@@ -26,9 +26,3 @@ static void    map_render(char **map, t_game *game)
         i++;
     }
 }
-
-void reload_map(char **map, t_game *game)
-{
-    map_render(map, game);
-}
-

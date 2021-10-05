@@ -64,11 +64,13 @@ struct s_game
 # define KEY_DOWN 65364
 # define KEY_RIGHT 65363
 
+void    init_game(t_game *game);
 char    **read_map(char *path_to_file);
 void    print_map (char **map);
 void    map_counter (char **map, t_game *game);
-void    reload_map(char **map, t_game *game);
+void    map_render(char **map, t_game *game);
 void	player_update(int keycode, t_game *game);
+void    event_handler(t_game *game);
 void    initialize_image(t_game *game);
 void    draw_image(t_game *game, void *img, int x, int y);
 void    init_window(t_game *game);

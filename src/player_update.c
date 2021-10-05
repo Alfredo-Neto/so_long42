@@ -22,7 +22,5 @@ void	player_update(int keycode, t_game *game)
 	    handle_situation(game, game->x, game->y + 1);
         game->player_direction = 'r';
     }
-    reload_map(game->map, game);
-    show_info(game);
 }    
 
