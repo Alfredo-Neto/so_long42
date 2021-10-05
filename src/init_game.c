@@ -16,7 +16,6 @@ static void initialize_data(t_game *game)
 static void initialize_rendering(t_game *game)
 {
     init_window(game);
-    print_map(game->map);
     initialize_image(game);
 }
 
