@@ -6,6 +6,7 @@ int main (int argc, char **argv)
 
     // todo:
         // destruir(dar free) no mapa, e tudo o mais, para nao continuar o jogo depois da saida
+        // verificar se o mapa é válido
         // abstrair funcoes da main para outras(arquitetura)
         // fechar janela ao clicar no x
         // opcional: mostrar stats do jogo na propria janela, ao inves de apenas no shell
