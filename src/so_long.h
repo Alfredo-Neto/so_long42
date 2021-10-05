@@ -38,14 +38,19 @@ struct s_game
     int     moves;
     int     collected;
     int     collectibles;
+    int     player_direction;
     char    **map_read;
 };
 
 # define FILE_WALL "textures/1.xpm"
 # define FILE_SPACE "textures/0.xpm"
 # define FILE_COLLECTIBLE "textures/C.xpm"
-# define FILE_PLAYER "textures/P_R.xpm"
 # define FILE_EXIT "textures/E.xpm"
+# define FILE_PLAYER_U "textures/P_U.xpm"
+# define FILE_PLAYER_D "textures/P_D.xpm"
+# define FILE_PLAYER_L "textures/P_L.xpm"
+# define FILE_PLAYER_R "textures/P_R.xpm"
+
 # define SPRITE_SIZE   32
 
 # define X_EVENT_KEY_PRESS 2

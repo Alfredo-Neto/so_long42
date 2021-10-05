@@ -12,7 +12,7 @@ void count_collectibles(char **map, t_game *game)
         while(map[i][j])
         {   
             if(map[i][j] == 'C')
-            game->collectibles++;
+                game->collectibles++;
             j++;
         }
         i++;

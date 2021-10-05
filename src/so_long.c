@@ -10,7 +10,8 @@ int main (int argc, char **argv)
         game.map = read_map(argv[1]);
         map_counter(game.map, &game);
         count_collectibles(game.map, &game);
-
+        game.moves = 0;
+        game.collected = 0;
         init_window(&game);
     
         print_map(game.map);
