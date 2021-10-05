@@ -10,6 +10,7 @@ void	player_update(int keycode, t_game *game)
 	    handle_situation(game, game->x, game->y - 1);
     if(keycode == KEY_D || keycode == KEY_RIGHT)
 	    handle_situation(game, game->x, game->y + 1);
+    reload_map(game->map, game);
     show_info(game);
 }    
 

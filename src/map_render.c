@@ -1,6 +1,6 @@
 #include "so_long.h"
 
-void    map_render(char **map, t_game *game)
+static void    map_render(char **map, t_game *game)
 {
     int  i;
     int  j;
@@ -16,7 +16,7 @@ void    map_render(char **map, t_game *game)
             else if (map[i][j] == '0')
                 draw_image(game, game->empty_space, i, j);
             else if (map[i][j] == 'C')
-                hook_c(game, i, j);
+                draw_image(game, game->collectible, i, j);
             else if (map[i][j] == 'E')
                 draw_image(game, game->exit, i, j);
             else if (map[i][j] == 'P')
@@ -26,3 +26,9 @@ void    map_render(char **map, t_game *game)
         i++;
     }
 }
+
+void reload_map(char **map, t_game *game)
+{
+    map_render(map, game);
+}
+

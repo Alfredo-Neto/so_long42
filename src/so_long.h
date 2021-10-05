@@ -13,7 +13,6 @@
 # include <X11/X.h>
 
 typedef struct s_game    t_game;
-typedef struct s_param   t_param;
 
 struct s_game
 {
@@ -22,7 +21,10 @@ struct s_game
     void    *wall;
     void    *empty_space;
     void    *collectible;
-    void    *player;
+    void    *player_r;
+    void    *player_l;
+    void    *player_u;
+    void    *player_d;
     void    *exit;
     void    *win;
     char    **map;
@@ -58,9 +60,9 @@ struct s_game
 # define KEY_RIGHT 65363
 
 char    **read_map(char *path_to_file);
-void    map_render(char **map, t_game *game);
 void    print_map (char **map);
 void    map_counter (char **map, t_game *game);
+void    reload_map(char **map, t_game *game);
 void	player_update(int keycode, t_game *game);
 void    initialize_image(t_game *game);
 void    draw_image(t_game *game, void *img, int x, int y);
@@ -68,8 +70,8 @@ void    init_window(t_game *game);
 int     key_press(int keycode, t_game *game);
 void    handle_situation(t_game *game, int x, int y);
 void    show_info(t_game *game);
-void    hook_c (t_game *game, int i, int j);
 void    hook_p (t_game *game, int i, int j);
+void    count_collectibles(char **map, t_game *game);
 
 #endif
 

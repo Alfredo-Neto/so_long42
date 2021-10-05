@@ -1,6 +1,5 @@
 #include "so_long.h"
 
-
 static void  swap_positions (char *curr_pos, char *next_pos, char curr_val, char next_val)
 {
     *curr_pos = next_val;
