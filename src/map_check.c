@@ -8,8 +8,8 @@ static int has_valid_walls(char **map, t_map *m)
     while (map[m->map_col_size])
         m->map_col_size++;
     m->map_col_size--;
-    i = 0;
     m->map_row_size = ft_strlen(*map) - 1;
+    i = 0;
     while(map[i])
     {
         j = 0;
