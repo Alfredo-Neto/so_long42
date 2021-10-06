@@ -31,7 +31,6 @@ struct s_game
     int     img_height;
     int     win_height;
     int     win_width;
-    int     map_size;
     int     x;
     int     y;
     int     moves;
