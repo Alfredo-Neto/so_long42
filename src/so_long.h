@@ -52,7 +52,6 @@ struct s_game
 # define SPRITE_SIZE   32
 
 # define X_EVENT_KEY_PRESS 2
-// # define X_EVENT_FOCUS_IN 9
 # define X_EVENT_DESTROY_NOTIFY 17
 # define KEY_W 119
 # define KEY_A 97
