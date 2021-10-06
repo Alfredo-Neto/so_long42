@@ -1,8 +1,6 @@
 #include "so_long.h"
 // todo:
-    // destruir(dar free) no mapa, e tudo o mais, para nao continuar o jogo depois da saida
-    // verificar se o mapa é válido
-    // abstrair funcoes da main para outras(arquitetura)
+    // mandatory: verificar se o mapa é válido
 
     // bonus: criar tropas inimigas
     //        animar colecionaveis
