@@ -39,7 +39,6 @@ struct s_game
     int     collectibles;
     int     player_direction;
     int     end_game;
-    char    **map_read;
 };
 
 # define FILE_WALL "textures/1.xpm"
