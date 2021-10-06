@@ -54,6 +54,8 @@ struct s_game
 # define SPRITE_SIZE   32
 
 # define X_EVENT_KEY_PRESS 2
+// # define X_EVENT_FOCUS_IN 9
+# define X_EVENT_DESTROY_NOTIFY 17
 # define KEY_W 119
 # define KEY_A 97
 # define KEY_S 115
@@ -79,6 +81,8 @@ void    handle_situation(t_game *game, int x, int y);
 void    show_info(t_game *game);
 void    hook_p (t_game *game, int i, int j);
 void    count_collectibles(char **map, t_game *game);
+int     exit_game(t_game *game);
+
 
 #endif
 
