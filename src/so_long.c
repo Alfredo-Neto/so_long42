@@ -13,9 +13,18 @@ int main (int argc, char **argv)
     if (argc == 2)
     {
         game.map = read_map(argv[1]);
-        init_game(&game);
-        event_handler(&game);
-        mlx_loop(game.mlx);
+        if (is_valid_map(game.map))
+        {   
+            init_game(&game);
+            event_handler(&game);
+            mlx_loop(game.mlx);
+        }
+        else
+        {
+            printf("Error\n This map is not valid!");
+            free_map(game.map);
+            exit(0);
+        }
     }
     else
     {

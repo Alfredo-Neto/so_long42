@@ -1,6 +1,6 @@
 #include "so_long.h"
 
-static void	free_map(char **map)
+void	free_map(char **map)
 {
 	int	i;
 

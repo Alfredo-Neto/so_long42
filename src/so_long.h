@@ -12,6 +12,7 @@
 # include <X11/X.h>
 
 typedef struct s_game    t_game;
+typedef struct s_map     t_map;
 
 struct s_game
 {
@@ -38,6 +39,12 @@ struct s_game
     int     collectibles;
     int     player_direction;
     int     end_game;
+};
+
+struct s_map
+{
+    int map_row_size;
+    int map_col_size;
 };
 
 # define FILE_WALL "textures/1.xpm"
@@ -79,7 +86,8 @@ void    show_info(t_game *game);
 void    hook_p (t_game *game, int i, int j);
 void    count_collectibles(char **map, t_game *game);
 int     exit_game(t_game *game);
-
+void	free_map(char **map);
+int     is_valid_map(char **map);
 
 #endif
 
