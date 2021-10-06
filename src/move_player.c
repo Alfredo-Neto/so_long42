@@ -44,6 +44,7 @@ static void handle_e(t_game *game, int x, int y)
     {
         swap_positions(&game->map[i][j], &game->map[x][y], 'E', '0');
         game->moves++;
+        game->end_game = 1;
         game->x = x;
         game->y = y;
     }

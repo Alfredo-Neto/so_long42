@@ -39,6 +39,7 @@ struct s_game
     int     collected;
     int     collectibles;
     int     player_direction;
+    int     end_game;
     char    **map_read;
 };
 

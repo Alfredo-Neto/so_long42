@@ -11,6 +11,7 @@ static void initialize_data(t_game *game)
     count_collectibles(game->map, game);
     game->moves = 0;
     game->collected = 0;
+    game->end_game = 0;
 }
 
 static void initialize_rendering(t_game *game)
