@@ -5,12 +5,9 @@ static int has_valid_walls(char **map, t_map *m)
     int  i;
     int  j;
 
-    i = 0;
-    m->map_col_size = 0;
-    while (map[i++])
+    while (map[m->map_col_size])
         m->map_col_size++;
     m->map_col_size--;
-    
     i = 0;
     m->map_row_size = ft_strlen(*map) - 1;
     while(map[i])
@@ -26,7 +23,6 @@ static int has_valid_walls(char **map, t_map *m)
         }
         i++;
     }
- 
     return (1);
 }
 
