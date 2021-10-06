@@ -18,6 +18,7 @@ static void initialize_rendering(t_game *game)
 {
     init_window(game);
     initialize_image(game);
+    map_render(game->map, game);
 }
 
 void init_game(t_game *game)
