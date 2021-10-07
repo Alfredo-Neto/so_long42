@@ -49,7 +49,7 @@ $(OBJ_DIR):
 	mkdir $(OBJ_DIR)
 
 run:
-	./so_long "assets/maps/another.ber"
+	./so_long "assets/maps/another_4.ber"
 
 resize:
 	mogrify -resize 32X32 $(IMG_DIR)/*.png && make img
