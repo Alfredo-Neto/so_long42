@@ -45,6 +45,9 @@ struct s_map
 {
     int map_row_size;
     int map_col_size;
+    int player;
+    int exit;
+    int collectible;
 };
 
 # define FILE_WALL "textures/1.xpm"
@@ -88,6 +91,7 @@ void    count_collectibles(char **map, t_game *game);
 int     exit_game(t_game *game);
 void	free_map(char **map);
 int     is_valid_map(char **map);
+void    map_check_init(t_map *map);
 
 #endif
 
