@@ -13,7 +13,7 @@ int main (int argc, char **argv)
     if (argc == 2)
     {
         game.map = read_map(argv[1]);
-        if (is_valid_map(game.map))
+        if (is_valid_map(game.map, argv[1]))
         {   
             init_game(&game);
             event_handler(&game);
