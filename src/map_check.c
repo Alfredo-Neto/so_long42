@@ -1,6 +1,6 @@
 #include "so_long.h"
 
-static int has_valid_walls(char **map, t_map *m)
+int has_valid_walls(char **map, t_map *m)
 {
     int  i;
     int  j;
@@ -26,7 +26,7 @@ static int has_valid_walls(char **map, t_map *m)
     return (1);
 }
 
-static int has_valid_chars(char **map)
+int has_valid_chars(char **map)
 {
     int  i;
     int  j;
@@ -48,7 +48,7 @@ static int has_valid_chars(char **map)
     return (1);
 }
 
-static int has_minimum_chars(char **map, t_map *m)
+int has_minimum_chars(char **map, t_map *m)
 {
     int  i;
 	int  j;
@@ -75,7 +75,7 @@ static int has_minimum_chars(char **map, t_map *m)
     return (0);
 }
 
-static int is_rectangular(char **map)
+int is_rectangular(char **map)
 {
 	int i;
 	size_t line_size;
@@ -88,7 +88,7 @@ static int is_rectangular(char **map)
 	return (1);
 }
 
-static int has_valid_extension(char *file)
+int has_valid_extension(char *file)
 {	
 	char *ext;
 
@@ -98,18 +98,4 @@ static int has_valid_extension(char *file)
 	if (ft_strncmp(ext, ".ber", 5))
 		return (0);
 	return (1);
-}
-
-int is_valid_map(char **map, char *file)
-{
-    t_map m;
-
-	if(!map)
-		return (0);
-	map_check_init(&m);
-	if (has_valid_walls(map, &m) && has_valid_chars(map) 
-	&& has_minimum_chars(map, &m) && is_rectangular(map) 
-	&& has_valid_extension(file))
-		return (1);
-    return (0);
 }

@@ -1,5 +1,6 @@
 #include "so_long.h"
 // todo:
+        // norminette
     // bonus: criar tropas inimigas
     //        animar colecionaveis
     //        mostrar stats do jogo na propria janela, ao invés de apenas no shell
