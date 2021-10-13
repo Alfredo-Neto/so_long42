@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.h                                          :+:      :+:    :+:   */
+/*   so_long_bonus.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 14:45:14 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/10/13 15:14:27 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/10/13 19:00:03 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SO_LONG_H
-# define SO_LONG_H
+#ifndef SO_LONG_BONUS_H
+# define SO_LONG_BONUS_H
 # include <stdio.h>
 # include <unistd.h>
 # include <fcntl.h>
@@ -40,6 +40,8 @@ struct	s_game
 	void	*exit;
 	void	*win;
 	char	**map;
+	int		animations;
+	int		frame;
 	int		img_width;
 	int		img_height;
 	int		win_height;
@@ -65,12 +67,17 @@ struct s_map
 
 # define FILE_WALL	"textures/1.xpm"
 # define FILE_SPACE	"textures/0.xpm"
-# define FILE_COLLECTIBLE	"textures/C.xpm"
 # define FILE_EXIT	"textures/E.xpm"
 # define FILE_PLAYER_U	"textures/P_U.xpm"
 # define FILE_PLAYER_D	"textures/P_D.xpm"
 # define FILE_PLAYER_L	"textures/P_L.xpm"
 # define FILE_PLAYER_R	"textures/P_R.xpm"
+# define FILE_COLLECTIBLE_1	"textures/C_1.xpm"
+# define FILE_COLLECTIBLE_2	"textures/C_2.xpm"
+# define FILE_COLLECTIBLE_3	"textures/C_3.xpm"
+# define FILE_COLLECTIBLE_4	"textures/C_4.xpm"
+# define FILE_COLLECTIBLE_5	"textures/C_5.xpm"
+
 
 # define SPRITE_SIZE	32
 
@@ -86,6 +93,8 @@ struct s_map
 # define KEY_DOWN	65364
 # define KEY_RIGHT	65363
 
+#define ANIMATION_SPEED 1000
+
 void	init_game(t_game *game);
 char	**read_map(char *path_to_file);
 void	print_map(char **map);
@@ -93,6 +102,7 @@ void	map_counter(char **map, t_game *game);
 void	map_render(char **map, t_game *game);
 void	player_update(int keycode, t_game *game);
 void	event_handler(t_game *game);
+void	*convert_image(char *img, t_game *game);
 void	initialize_image(t_game *game);
 void	draw_image(t_game *game, void *img, int x, int y);
 void	init_window(t_game *game);
@@ -110,4 +120,6 @@ int		has_valid_chars(char **map);
 int		has_minimum_chars(char **map, t_map *m);
 int		is_rectangular(char **map);
 int		has_valid_extension(char *file);
+void	animate(t_game *game);
+int		loop_hook(t_game *game);
 #endif

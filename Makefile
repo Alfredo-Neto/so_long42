@@ -31,7 +31,7 @@ SRC_FILES_BONUS = so_long_bonus.c read_map_bonus.c map_render_bonus.c \
 			init_image_bonus.c map_utils_bonus.c player_update_bonus.c \
 			game_utils_bonus.c move_player_bonus.c show_info_bonus.c hook_p_bonus.c \
 			init_game_bonus.c event_handler_bonus.c exit_game_bonus.c map_check_bonus.c \
-			map_check_init_bonus.c validate_map_bonus.c
+			map_check_init_bonus.c validate_map_bonus.c animation_bonus.c loop_hook_bonus.c \
 
 SRC = $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 SRC_BONUS = $(addprefix $(SRC_BONUS_DIR)/, $(SRC_FILES_BONUS))
@@ -58,7 +58,7 @@ $(NAME_BONUS): $(OBJ_BONUS_DIR) $(LIBFT) $(MLX) $(OBJ_BONUS)
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(HEADERS)
 	$(CC) $(CFLAGS) -c -I$(INCLUDE_DIR) -o $@ $<
 
-$(OBJ_BONUS_DIR)/%.o: $(SRC_BONUS_DIR)/%.c $(HEADERS)
+$(OBJ_BONUS_DIR)/%.o: $(SRC_BONUS_DIR)/%.c $(HEADERS_BONUS)
 	$(CC) $(CFLAGS) -c -I$(INCLUDE_DIR) -o $@ $<
 
 $(LIBFT):
@@ -100,5 +100,7 @@ fclean: clean
 	$(RM) $(NAME) $(NAME_BONUS)
 
 re: fclean all
+
+reb: fclean bonus
 
 .PHONY: clean fclean all re bonus
