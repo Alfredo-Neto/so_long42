@@ -48,6 +48,7 @@ struct s_map
     int player;
     int exit;
     int collectible;
+    int space;
 };
 
 # define FILE_WALL "textures/1.xpm"

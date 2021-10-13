@@ -1,59 +1,71 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   map_check.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/10/12 18:54:37 by ade-agui          #+#    #+#             */
+/*   Updated: 2021/10/13 09:48:47 by ade-agui         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "so_long.h"
 
 int has_valid_walls(char **map, t_map *m)
 {
-    int  i;
-    int  j;
+	int  i;
+	int  j;
 
-    while (map[m->map_col_size])
-        m->map_col_size++;
-    m->map_col_size--;
-    m->map_row_size = ft_strlen(*map) - 1;
-    i = 0;
-    while(map[i])
-    {
-        j = 0;
-        while(map[i][j])
-        {   
-            if (map[0][j] != '1' || 
-                map[i][0] != '1' || map[i][m->map_row_size] != '1'
-                || map[m->map_col_size][j] != '1')
-                    return (0);
-            j++;
-        }
-        i++;
-    }
-    return (1);
+	while (map[m->map_col_size])
+		m->map_col_size++;
+	m->map_col_size--;
+	m->map_row_size = ft_strlen(*map) - 1;
+	i = 0;
+	while(map[i])
+	{
+		j = 0;
+		while(map[i][j])
+		{   
+			if (map[0][j] != '1' || 
+				map[i][0] != '1' || map[i][m->map_row_size] != '1'
+				|| map[m->map_col_size][j] != '1')
+					return (0);
+			j++;
+		}
+		i++;
+	}
+	return (1);
 }
 
 int has_valid_chars(char **map)
 {
-    int  i;
-    int  j;
+	int  i;
+	int  j;
 
-    i = 0;
-    while(map[i])
-    {
-        j = 0;
-        while(map[i][j])
-        {   
-           if (map[i][j] != '1' && map[i][j] != '0' 
-            && map[i][j] != 'P' && map[i][j] != 'C' 
-            && map[i][j] != 'E')
-                return (0);
-            j++;
-        }
-        i++;
-    }
-    return (1);
+	i = 0;
+	while(map[i])
+	{
+		j = 0;
+		while(map[i][j])
+		{   
+		   if (map[i][j] != '1' && map[i][j] != '0' 
+			&& map[i][j] != 'P' && map[i][j] != 'C' 
+			&& map[i][j] != 'E')
+				return (0);
+			j++;
+		}
+		i++;
+	}
+	return (1);
 }
 
 int has_minimum_chars(char **map, t_map *m)
 {
-    int  i;
+	int  i;
 	int  j;
 
-    i = 0;
+	i = 0;
 	while(map[i])
 	{
 		j = 0;
@@ -65,14 +77,16 @@ int has_minimum_chars(char **map, t_map *m)
 				m->collectible++;
 			if(map[i][j] == 'E')
 				m->exit++;
+			if(map[i][j] == '0')
+				m->space++;
 			if (m->collectible > 0 
-				&& m->exit > 0 && m->player > 0)
+				&& m->exit > 0 && m->player > 0 && m->space > 0)
 			return (1);
 			j++;
 		}
 		i++;
 	}
-    return (0);
+	return (0);
 }
 
 int is_rectangular(char **map)
