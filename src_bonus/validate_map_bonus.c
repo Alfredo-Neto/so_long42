@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   game_utils.c                                       :+:      :+:    :+:   */
+/*   validate_map_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/13 14:38:11 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/10/13 17:03:35 by ade-agui         ###   ########.fr       */
+/*   Created: 2021/10/13 14:45:27 by ade-agui          #+#    #+#             */
+/*   Updated: 2021/10/13 16:44:26 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
 
-int	key_press(int keycode, t_game *game)
+int	is_valid_map(char **map, char *file)
 {
-	if (keycode == XK_Escape)
-		exit_game(game);
-	if (game->end_game)
+	t_map	mp;
+
+	if (!map)
 		return (0);
-	player_update(keycode, game);
-	map_render(game->map, game);
-	show_info(game);
+	map_check_init(&mp);
+	if (has_valid_walls(map, &mp) && has_valid_chars(map)
+		&& has_minimum_chars(map, &mp) && is_rectangular(map)
+		&& has_valid_extension(file))
+		return (1);
 	return (0);
 }

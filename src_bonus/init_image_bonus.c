@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_image.c                                       :+:      :+:    :+:   */
+/*   init_image_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 14:40:49 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/10/13 17:03:39 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/10/13 16:44:26 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
 
 static void	*convert_image(char *img, t_game *game)
 {

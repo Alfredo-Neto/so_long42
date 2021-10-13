@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   game_utils.c                                       :+:      :+:    :+:   */
+/*   show_info_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/13 14:38:11 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/10/13 17:03:35 by ade-agui         ###   ########.fr       */
+/*   Created: 2021/10/13 14:44:39 by ade-agui          #+#    #+#             */
+/*   Updated: 2021/10/13 16:44:26 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
 
-int	key_press(int keycode, t_game *game)
+void	show_info(t_game *game)
 {
-	if (keycode == XK_Escape)
-		exit_game(game);
-	if (game->end_game)
-		return (0);
-	player_update(keycode, game);
-	map_render(game->map, game);
-	show_info(game);
-	return (0);
+	printf("Moves: %d\n", game->moves);
+	printf("Collectibles: %d, Collected: %d",
+		game->collectibles, game->collected);
+	print_map(game->map);
 }
