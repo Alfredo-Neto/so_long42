@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 14:42:30 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/10/13 16:44:26 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/10/14 01:15:01 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ void	map_render(char **map, t_game *game)
 				draw_image(game, game->collectible, i, j);
 			else if (map[i][j] == 'E')
 				draw_image(game, game->exit, i, j);
+			else if (is_enemy(map[i][j]))
+				hook_enemy(game, i, j);
 			else if (map[i][j] == 'P')
 				hook_p(game, i, j);
 			j++;

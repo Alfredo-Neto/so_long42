@@ -11,10 +11,13 @@ RM = rm -rf
 
 XPM_DIR = textures
 IMG_DIR = assets/img
+
 SRC_DIR = src
 SRC_BONUS_DIR = src_bonus
+
 OBJ_DIR = obj
 OBJ_BONUS_DIR = obj_bonus
+
 HEADERS = src/so_long.h
 HEADERS_BONUS = src_bonus/so_long_bonus.h
 
@@ -32,18 +35,18 @@ SRC_FILES_BONUS = so_long_bonus.c read_map_bonus.c map_render_bonus.c \
 			game_utils_bonus.c move_player_bonus.c show_info_bonus.c hook_p_bonus.c \
 			init_game_bonus.c event_handler_bonus.c exit_game_bonus.c map_check_bonus.c \
 			map_check_init_bonus.c validate_map_bonus.c animation_bonus.c loop_hook_bonus.c \
+			enemy_update_bonus.c enemy_utils_bonus.c hook_enemy_bonus.c
 
 SRC = $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 SRC_BONUS = $(addprefix $(SRC_BONUS_DIR)/, $(SRC_FILES_BONUS))
+
 OBJ = $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 OBJ_BONUS = $(SRC_BONUS:$(SRC_BONUS_DIR)/%.c=$(OBJ_BONUS_DIR)/%.o)
 
 CC = clang
 CFLAGS = -Wall -Wextra -Werror
+
 LIBFLAGS = -lft -lXext -lX11 -lmlx -lm
-VALGRIND = valgrind -q --leak-check=full --show-leak-kinds=all -s --track-origins=yes ./$(NAME)
-VALGRIND_BONUS = valgrind -q --leak-check=full --show-leak-kinds=all -s --track-origins=yes ./$(NAME_BONUS)
-SANITIZE = -fsanitize=address
 
 all: $(NAME)
 
@@ -79,17 +82,20 @@ run:
 runb:
 	./$(NAME_BONUS) "assets/maps/another.ber"
 
+runbv:
+	$(MAKE) bonus && valgrind -q --leak-check=full --show-leak-kinds=all -s --track-origins=yes ./so_long_bonus "assets/maps/another_2.ber"
+
+runv:
+	$(MAKE) && valgrind -q --leak-check=full --show-leak-kinds=all -s --track-origins=yes ./so_long assets/maps/another_2.ber
+
+runiv:
+	$(MAKE) && valgrind -q --leak-check=full --show-leak-kinds=all -s --track-origins=yes ./so_long assets/maps/another.berr
+
 resize:
 	mogrify -resize 32X32 $(IMG_DIR)/*.png && make img
 
 img:
 	convert $(IMG_DIR)/*.png -set filename:base "%[basename]" "%[filename:base].xpm" && mv *.xpm $(XPM_DIR)
-
-valgrind:
-	$(VALGRIND)
-
-valgrindb:
-	$(VALGRIND_BONUS)
 
 clean:
 	$(RM) $(OBJ_DIR) $(OBJ_BONUS_DIR)

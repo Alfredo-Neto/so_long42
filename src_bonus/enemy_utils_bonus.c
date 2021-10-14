@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   event_handler_bonus.c                              :+:      :+:    :+:   */
+/*   enemy_utils_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/13 14:37:35 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/10/13 21:29:51 by ade-agui         ###   ########.fr       */
+/*   Created: 2021/10/14 00:37:50 by ade-agui          #+#    #+#             */
+/*   Updated: 2021/10/14 00:39:54 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long_bonus.h"
 
-void	event_handler(t_game *game)
+int is_enemy(char enemy)
 {
-	mlx_hook(game->win, X_EVENT_KEY_PRESS, 1L << 0, &key_press, game);
-	mlx_hook(game->win, X_EVENT_DESTROY_NOTIFY, 0, &exit_game, game);
-	mlx_loop_hook(game->mlx, &loop_hook, game);
+    return (enemy == 'i' || enemy == 'j' || enemy == 'k' || enemy == 'l');
 }

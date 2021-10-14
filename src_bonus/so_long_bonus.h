@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 14:45:14 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/10/13 19:00:03 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/10/14 01:10:04 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,13 @@ struct	s_game
 	void	*player_d;
 	void	*exit;
 	void	*win;
+	void	*enemy_w;
+	void	*enemy_a;
+	void	*enemy_s;
+	void	*enemy_d;
 	char	**map;
 	int		animations;
+	int		loops;
 	int		frame;
 	int		img_width;
 	int		img_height;
@@ -77,6 +82,11 @@ struct s_map
 # define FILE_COLLECTIBLE_3	"textures/C_3.xpm"
 # define FILE_COLLECTIBLE_4	"textures/C_4.xpm"
 # define FILE_COLLECTIBLE_5	"textures/C_5.xpm"
+# define FILE_ENEMY_W "textures/E_W.xpm"
+# define FILE_ENEMY_S "textures/E_S.xpm"
+# define FILE_ENEMY_A "textures/E_A.xpm"
+# define FILE_ENEMY_D "textures/E_D.xpm"
+# define FILE_ENEMY "textures/EN.xpm"
 
 
 # define SPRITE_SIZE	32
@@ -93,7 +103,8 @@ struct s_map
 # define KEY_DOWN	65364
 # define KEY_RIGHT	65363
 
-#define ANIMATION_SPEED 1000
+# define ANIMATION_SPEED 1000
+# define GAME_SPEED	2000
 
 void	init_game(t_game *game);
 char	**read_map(char *path_to_file);
@@ -122,4 +133,9 @@ int		is_rectangular(char **map);
 int		has_valid_extension(char *file);
 void	animate(t_game *game);
 int		loop_hook(t_game *game);
+void	swap_positions(char *curr_p, char *nx_p, char curr_val, char nx_val);
+void	enemy_update(t_game *game);
+int		is_enemy(char enemy);
+void	hook_enemy(t_game *game, int i, int j);
+
 #endif
