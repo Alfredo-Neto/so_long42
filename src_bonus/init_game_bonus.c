@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 14:40:36 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/10/14 17:22:59 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/10/14 18:09:35 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ static void	initialize_data(t_game *game)
 	count_collectibles(game->map, game);
 	game->moves = 0;
 	game->collected = 0;
-	game->collectibles = 0;
 	game->frame = 0;
 	game->end_game = 0;
 	game->loops = 0;

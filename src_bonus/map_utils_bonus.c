@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 14:43:35 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/10/13 16:44:26 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/10/14 18:09:35 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ void	count_collectibles(char **map, t_game *game)
 	int	i;
 	int	j;
 
+	game->collectibles = 0;
 	i = 0;
 	while (map[i])
 	{

@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 00:37:50 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/10/14 17:52:30 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/10/14 18:23:00 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,11 @@ char	*enemy_flip(char *c)
 	if (*c == 'j')
 		*c = 'K';
 	return (c);
+}
+
+void	enemy_kill(t_game *game)
+{
+	
 }
 
 void	enemy_translate(t_game *game)
