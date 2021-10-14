@@ -6,22 +6,24 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 00:37:30 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/10/14 03:19:59 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/10/14 06:48:26 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long_bonus.h"
 
-static void update_enemy_position(char **map, int i, int j)
+static void update_enemy_position(t_game *game, int i, int j)
 {
-    if (map[i][j] == 'i' && map[i - 1][j] == '0')
-        swap_positions(&map[i][j], &map[i - 1][j], '0', 'i');
-    if (map[i][j] == 'k' && map[i + 1][j] == '0')
-        swap_positions(&map[i][j], &map[i + 1][j], '0', 'j');
-    if (map[i][j] == 'j' && map[i][j - 1] == '0')
-        swap_positions(&map[i][j], &map[i][j - 1], '0', 'k');
-    if (map[i][j] == 'l' && map[i][j + 1] == '0')
-        swap_positions(&map[i][j], &map[i][j + 1], '0', 'l');
+    if (game->map[i][j] == 'i' && game->map[i - 1][j] == '0')
+        swap_positions(&game->map[i][j], &game->map[i - 1][j], 'I', '0');
+    if (game->map[i][j] == 'k' && game->map[i + 1][j] == '0')
+        swap_positions(&game->map[i][j], &game->map[i + 1][j], 'K', '0');
+    if (game->map[i][j] == 'j' && game->map[i][j - 1] == '0')
+        swap_positions(&game->map[i][j], &game->map[i][j - 1], 'J', '0');
+    if (game->map[i][j] == 'l' && game->map[i][j + 1] == '0')
+        swap_positions(&game->map[i][j], &game->map[i][j + 1], 'L', '0');
+    else
+        enemy_flip(&game->map[i][j]);
 }
 
 void enemy_update(t_game *game)
@@ -42,10 +44,11 @@ void enemy_update(t_game *game)
         while(game->map[i][j])
         {
             if (is_enemy(game->map[i][j]))
-                update_enemy_position(game->map, i, j);
+                update_enemy_position(game, i, j);
             j++;
         }
         i++;
     }
+    enemy_translate(game);
     map_render(game->map, game);
 }
