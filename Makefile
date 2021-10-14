@@ -27,7 +27,7 @@ SRC_FILES = so_long.c read_map.c map_render.c draw_image.c init_window.c	\
 			init_image.c map_utils.c player_update.c \
 			game_utils.c move_player.c show_info.c hook_p.c \
 			init_game.c event_handler.c exit_game.c map_check.c \
-			map_check_init.c validate_map.c
+			map_check_init.c validate_map.c get_next_line.c
 
 SRC_FILES_BONUS = so_long_bonus.c read_map_bonus.c map_render_bonus.c \
 			draw_image_bonus.c init_window_bonus.c	\

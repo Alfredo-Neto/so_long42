@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 14:45:14 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/10/13 17:03:57 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/10/14 15:40:53 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,4 +110,5 @@ int		has_valid_chars(char **map);
 int		has_minimum_chars(char **map, t_map *m);
 int		is_rectangular(char **map);
 int		has_valid_extension(char *file);
+char	*get_next_line(int fd);
 #endif
