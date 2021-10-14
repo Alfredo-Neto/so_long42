@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 14:44:26 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/10/13 17:03:51 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/10/14 14:20:20 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ char	**read_map(char *path_to_file)
 	while (ft_get_next_line(fd, &line))
 	{
 		buffer = ft_strjoin(buffer, line);
-		buffer = ft_strjoin(buffer, "\n");
 		ft_super_free((void *)&line);
 	}
 	buffer = ft_strjoin(buffer, line);

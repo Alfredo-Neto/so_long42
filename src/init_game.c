@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 14:40:36 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/10/14 07:03:13 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/10/14 07:10:14 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ static void	initialize_data(t_game *game)
 	game->moves = 0;
 	game->collected = 0;
 	game->end_game = 0;
+	game->player_direction = 'r';
 }
 
 static void	initialize_rendering(t_game *game)
