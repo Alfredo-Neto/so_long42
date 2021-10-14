@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 14:40:36 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/10/14 06:49:14 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/10/14 15:51:25 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,11 @@ static void	initialize_data(t_game *game)
 	count_collectibles(game->map, game);
 	game->moves = 0;
 	game->collected = 0;
+	game->collectibles = 0;
 	game->end_game = 0;
 	game->loops = 0;
 	game->animations = 0;
+	game->player_direction = 'r';
 }
 
 static void	initialize_rendering(t_game *game)

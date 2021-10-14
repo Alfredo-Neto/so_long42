@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 14:44:26 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/10/14 15:39:44 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/10/14 15:54:13 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,15 @@ char	**read_map(char *path_to_file)
 
 	fd = open(path_to_file, O_RDONLY);
 	if (fd == -1)
-	{
-		ft_putstr_fd("Mapa não pôde ser lido", fd);
 		return (NULL);
-	}
 	buffer = ft_strdup("");
 	while (1)
 	{
 		line = get_next_line(fd);
 		if (!line)
-			break;
+			break ;
 		tmp = buffer;
-		buffer	= ft_strjoin(tmp, line);
+		buffer = ft_strjoin(tmp, line);
 		ft_super_free((void *)&tmp);
 		ft_super_free((void *)&line);
 	}
