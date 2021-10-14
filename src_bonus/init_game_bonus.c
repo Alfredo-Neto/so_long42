@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 14:40:36 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/10/13 16:44:26 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/10/14 02:44:09 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ static void	initialize_data(t_game *game)
 	game->moves = 0;
 	game->collected = 0;
 	game->end_game = 0;
+	game->loops = 0;
+	game->animations = 0;
 }
 
 static void	initialize_rendering(t_game *game)
@@ -37,5 +39,6 @@ void	init_game(t_game *game)
 {
 	initialize_mlx(game);
 	initialize_data(game);
+	enemy_init(game);
 	initialize_rendering(game);
 }

@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 14:45:14 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/10/14 01:10:04 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/10/14 02:18:11 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,7 @@ struct s_map
 # define KEY_RIGHT	65363
 
 # define ANIMATION_SPEED 1000
-# define GAME_SPEED	2000
+# define GAME_SPEED	3000
 
 void	init_game(t_game *game);
 char	**read_map(char *path_to_file);
@@ -137,5 +137,6 @@ void	swap_positions(char *curr_p, char *nx_p, char curr_val, char nx_val);
 void	enemy_update(t_game *game);
 int		is_enemy(char enemy);
 void	hook_enemy(t_game *game, int i, int j);
+void	enemy_init (t_game *game);
 
 #endif

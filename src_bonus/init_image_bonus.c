@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 14:40:49 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/10/13 18:36:03 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/10/14 02:18:26 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,8 @@ void	initialize_image(t_game *game)
 	game->player_d = convert_image(FILE_PLAYER_D, game);
 	game->player_l = convert_image(FILE_PLAYER_L, game);
 	game->player_r = convert_image(FILE_PLAYER_R, game);
+	game->enemy_w = convert_image(FILE_ENEMY_W, game);
+	game->enemy_a = convert_image(FILE_ENEMY_A, game);
+	game->enemy_s = convert_image(FILE_ENEMY_S, game);
+	game->enemy_d = convert_image(FILE_ENEMY_D, game);
 }
