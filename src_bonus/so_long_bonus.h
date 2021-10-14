@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 14:45:14 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/10/14 16:32:30 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/10/14 17:52:42 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ struct	s_game
 	int		win_width;
 	int		x;
 	int		y;
+	int		i;
 	int		moves;
 	int		collected;
 	int		collectibles;
