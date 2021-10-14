@@ -6,28 +6,28 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 00:37:50 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/10/14 06:48:59 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/10/14 16:33:22 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long_bonus.h"
 
-int is_enemy(char enemy)
+int	is_enemy(char enemy)
 {
-    return (enemy == 'i' || enemy == 'j' || enemy == 'k' || enemy == 'l');
+	return (enemy == 'i' || enemy == 'j' || enemy == 'k' || enemy == 'l');
 }
 
-char    *enemy_flip(char *c)
+char	*enemy_flip(char *c)
 {
-    if (*c == 'k')
-        *c = 'L';
-    if (*c == 'l')
-        *c = 'I';
-    if (*c == 'i')
-        *c = 'J';
-    if (*c == 'j')
-        *c = 'K';
-    return (c);
+	if (*c == 'k')
+		*c = 'L';
+	if (*c == 'l')
+		*c = 'I';
+	if (*c == 'i')
+		*c = 'J';
+	if (*c == 'j')
+		*c = 'K';
+	return (c);
 }
 
 void	enemy_translate(t_game *game)
