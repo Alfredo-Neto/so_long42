@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 14:45:14 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/10/14 17:52:42 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/10/14 21:24:06 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ struct	s_game
 	void	*enemy_a;
 	void	*enemy_s;
 	void	*enemy_d;
+	void	*player_dead;
 	char	**map;
 	int		animations;
 	int		loops;
@@ -78,6 +79,7 @@ struct s_map
 # define FILE_PLAYER_D	"textures/P_D.xpm"
 # define FILE_PLAYER_L	"textures/P_L.xpm"
 # define FILE_PLAYER_R	"textures/P_R.xpm"
+# define FILE_PLAYER_DEAD	"textures/P_DEAD.xpm"
 # define FILE_COLLECTIBLE_1	"textures/C_1.xpm"
 # define FILE_COLLECTIBLE_2	"textures/C_2.xpm"
 # define FILE_COLLECTIBLE_3	"textures/C_3.xpm"
@@ -141,5 +143,6 @@ void	enemy_init(t_game *game);
 void	enemy_translate(t_game *game);
 char	*enemy_flip(char *c);
 char	*get_next_line(int fd);
+void	enemy_kill(t_game *game);
 
 #endif

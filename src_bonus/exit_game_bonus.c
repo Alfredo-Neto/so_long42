@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 14:37:53 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/10/14 16:22:58 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/10/14 21:29:26 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ static void	free_game(t_game *game)
 	mlx_destroy_image(game->mlx, game->player_l);
 	mlx_destroy_image(game->mlx, game->player_d);
 	mlx_destroy_image(game->mlx, game->player_u);
+	mlx_destroy_image(game->mlx, game->player_dead);
 	mlx_destroy_image(game->mlx, game->enemy_a);
 	mlx_destroy_image(game->mlx, game->enemy_d);
 	mlx_destroy_image(game->mlx, game->enemy_s);
