@@ -1,5 +1,7 @@
 a.out
 .gitignore
+so_long
+so_long_bonus
 *.o
 mlx-test
 libft.a
