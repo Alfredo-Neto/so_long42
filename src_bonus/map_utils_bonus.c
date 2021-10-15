@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 14:43:35 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/10/14 18:09:35 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/10/15 02:12:24 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	print_map(char **map)
 	int	i;
 
 	i = 0;
-	printf("\n------------- Mapa: ------------\n");
+	printf("\n");
 	while (map[i])
 	{
 		printf("%s\n", map[i]);
