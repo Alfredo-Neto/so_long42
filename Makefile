@@ -81,7 +81,7 @@ run:
 	./$(NAME) "assets/maps/another.ber"
 
 runb:
-	./$(NAME_BONUS) "assets/maps/another.ber"
+	./$(NAME_BONUS) "assets/maps/another_4.ber"
 
 runbv:
 	$(MAKE) bonus && valgrind -q --leak-check=full --show-leak-kinds=all -s --track-origins=yes ./so_long_bonus "assets/maps/another_2.ber"
