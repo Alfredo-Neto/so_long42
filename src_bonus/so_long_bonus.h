@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 14:45:14 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/10/14 21:24:06 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/10/15 01:37:03 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -144,5 +144,6 @@ void	enemy_translate(t_game *game);
 char	*enemy_flip(char *c);
 char	*get_next_line(int fd);
 void	enemy_kill(t_game *game);
+int		display_moves(t_game *game);
 
 #endif

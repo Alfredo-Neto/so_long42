@@ -36,7 +36,7 @@ SRC_FILES_BONUS = so_long_bonus.c read_map_bonus.c map_render_bonus.c \
 			init_game_bonus.c event_handler_bonus.c exit_game_bonus.c map_check_bonus.c \
 			map_check_init_bonus.c validate_map_bonus.c animation_bonus.c loop_hook_bonus.c \
 			enemy_update_bonus.c enemy_utils_bonus.c hook_enemy_bonus.c enemy_init_bonus.c \
-			get_next_line_bonus.c
+			get_next_line_bonus.c display_moves.c
 
 SRC = $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 SRC_BONUS = $(addprefix $(SRC_BONUS_DIR)/, $(SRC_FILES_BONUS))

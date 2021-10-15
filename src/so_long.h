@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 14:45:14 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/10/14 15:40:53 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/10/15 00:25:57 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ struct s_map
 
 # define FILE_WALL	"textures/1.xpm"
 # define FILE_SPACE	"textures/0.xpm"
-# define FILE_COLLECTIBLE	"textures/C.xpm"
+# define FILE_COLLECTIBLE	"textures/space.xpm"
 # define FILE_EXIT	"textures/E.xpm"
 # define FILE_PLAYER_U	"textures/P_U.xpm"
 # define FILE_PLAYER_D	"textures/P_D.xpm"
