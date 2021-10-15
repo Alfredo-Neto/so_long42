@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 14:38:35 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/10/14 21:02:02 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/10/15 04:21:03 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void	hook_p(t_game *game, int i, int j)
 {
-	draw_image(game, game->player_r, i, j);
 	if (game->player_direction == 'u')
 		draw_image(game, game->player_u, i, j);
 	if (game->player_direction == 'd')
