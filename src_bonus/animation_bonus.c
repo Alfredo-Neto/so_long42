@@ -6,7 +6,7 @@
 /*   By: ade-agui <ade-agui@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 18:22:47 by ade-agui          #+#    #+#             */
-/*   Updated: 2021/10/14 16:31:03 by ade-agui         ###   ########.fr       */
+/*   Updated: 2021/10/15 21:44:36 by ade-agui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	update_frame(t_game *game)
 {
-	if (game->frame < 5)
+	if (game->frame < 4)
 		game->frame++;
 	else
 		game->frame = 1;
@@ -31,8 +31,6 @@ static int	animate_collectibles(t_game *game, int frame)
 		game->collectible = convert_image(FILE_COLLECTIBLE_3, game);
 	else if (game->frame == 4)
 		game->collectible = convert_image(FILE_COLLECTIBLE_4, game);
-	else if (game->frame == 5)
-		game->collectible = convert_image(FILE_COLLECTIBLE_5, game);
 	return (frame);
 }
 
